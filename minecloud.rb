@@ -1,9 +1,7 @@
 require 'sinatra'
+require 'haml'
 
-get '/play' do
-  "OK let's play"
+get '/' do
+  haml :index
 end
 
-get '/noplay' do
-  "OK, game over"
-end
