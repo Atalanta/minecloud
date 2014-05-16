@@ -8,7 +8,14 @@ helpers do
     connection = Aws.ec2
     api = Magi::Api.new
     ami = api.search(connection, 'minecraft').first[0]
-    @ip = api.deploy(connection, ami)['ip']
+    api.deploy(connection, ami)
+  end
+
+  def stop(instance_id)
+    connection = Aws.ec2
+    api = Magi::Api.new
+    api.terminate( connection, instance_id )
+    erb :stop
   end
 end
 
@@ -17,10 +24,11 @@ get '/' do
 end
 
 get '/play' do
-  @ip = play
+  @game_data = play
   erb :play
 end
 
-get '/stop' do
+get '/stop/:instance_id' do |instance_id|
+  stop(instance_id)
   erb :stop
 end

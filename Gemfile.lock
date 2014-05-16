@@ -1,6 +1,7 @@
 GIT
   remote: https://51edfc6cd1e2a0ec09e1b7d86405374b88bf215d:x-oauth-basic@github.com/Atalanta/magi.git
-  revision: 52b85bba7daf62cafcf4168d797f60d2990bee8a
+  revision: c954ee5fb6db71638d6bf9a844039f3e14fa112f
+  branch: hackday
   specs:
     magi (0.0.1)
       aws-sdk-core (~> 2.0.rc6)

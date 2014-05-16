@@ -13,8 +13,8 @@
         <div class="jumbotron">
              <h1>Let's play!</h1>
              <p>Play Minecraft Motherfucker!</p>
-             <p>Minecloud is running at: <%= @ip %></p>
-             <p><a href="/stop" class="btn btn-primary btn-xl" id="go-minecloud">Sick of this shit now.</a>
+             <p>Minecloud instance <%= @game_data['id'] %> is running at: <%= @game_data['ip'] %></p>
+             <p><a href="/stop/<%= @game_data['id'] %>" class="btn btn-primary btn-xl" id="go-minecloud">Sick of this shit now.</a>
         </div>
   </body>
 
